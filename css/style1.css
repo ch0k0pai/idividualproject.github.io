@@ -1,0 +1,1087 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Chefy;
+  src: url(../fonts/ReenieBeanie.ttf);
+}
+
+@font-face {
+  font-family: ptserif;
+  src: url(../fonts/PTSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: ptserif_reg_ital;
+  src: url(../fonts/PTSerif-BoldItalic.ttf);
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Адаптивный header */
+.header {
+  background-color: #662308;
+  height: auto;
+  min-height: 45px;
+  display: flex;
+  opacity: 91%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.header__left, .header__right {
+  width: auto;
+  height: auto;
+  margin: 5px 15px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header__left {
+  margin-left: 0;
+}
+
+.header__right {
+  margin-left: 0;
+}
+
+.header__a {
+  color: #FFFFFF;
+  font-size: clamp(12px, 3.5vw, 15px);
+  text-decoration: none;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+  white-space: nowrap;
+}
+
+/* Адаптивные ссылки */
+.main__links {
+  display: flex;
+  margin: 20px 5% 0;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.link__left, .link__right {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link__a, .link__a_last {
+  font-size: clamp(14px, 3vw, 1.25em);
+  text-decoration: none;
+  color: #141414;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+  white-space: nowrap;
+}
+
+.chefy {
+  width: auto;
+  height: auto;
+}
+
+.chefy__txt {
+  font-family: Chefy;
+  font-size: clamp(28px, 6vw, 36px);
+  color: #141414;
+  line-height: 130%;
+  letter-spacing: 2%;
+}
+
+.favorites {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Адаптивный поисковый блок */
+.search {
+  background: linear-gradient(284.63deg, #F2F5F6 4.05%, #FDFDFD 90.48%);
+  width: 90%;
+  max-width: 590px;
+  height: auto;
+  min-height: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search__txt {
+  width: 90%;
+  max-width: 449px;
+  height: auto;
+  padding: 30px 5%;
+}
+
+.DuckDish {
+  font-size: clamp(32px, 7vw, 64px);
+  width: 100%;
+  height: auto;
+  color: #141414;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.DuckDish_story {
+  font-size: clamp(14px, 3.5vw, 1.25em);
+  width: 100%;
+  max-width: 431px;
+  height: auto;
+  color: #565656;
+  padding-top: 30px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.DuckDish_img {
+  width: 100%;
+  max-width: 690px;
+  height: auto;
+  padding-left: 0;
+}
+
+.DuckDish_img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Адаптивный поиск */
+.searching {
+  width: 90%;
+  max-width: 1040px;
+  height: auto;
+  min-height: 59px;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  border: 1px solid #74371E;
+  display: flex;
+  align-items: center;
+  margin: -15px auto 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.select__item {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.select {
+  background-color: #CCCCCC;
+  border-radius: 100px;
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  margin: 5px;
+  font-size: clamp(14px, 3vw, 1.25em);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 20px 12px;
+  background-position: 170px;
+  font-family: ptserif;
+}
+
+.search__recipes {
+  width: 200px;
+  height: auto;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: clamp(14px, 3vw, 1.25em);
+  color: #565656;
+  opacity: 50%;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.search__symbol {
+  width: 27px;
+  height: 27px;
+  padding: 5px;
+}
+
+.search__symbol img {
+  width: 100%;
+  height: auto;
+}
+
+/* Адаптивная линия */
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #F3F3F3;
+  margin-top: 18px;
+}
+
+/* Адаптивные рецепты */
+.recipes {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin: 50px auto 0;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.multinational_recipes {
+  width: 210px;
+  height: auto;
+  max-width: 210px;
+}
+
+.recipes_item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+
+.recipes_item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: #EAEAEA;
+  opacity: 90%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.overlay-content {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.overlay-content p {
+  padding-left: 15px;
+  padding-bottom: 7px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+/* Адаптивные категории */
+.categories {
+  width: 90%;
+  height: auto;
+  margin: 50px auto 0;
+}
+
+.second_line, .second_line_2 {
+  width: 100%;
+  height: 1px;
+  background-color: #E8E8E8;
+}
+
+.categories_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.three_line, .three_line_2 {
+  width: 50px;
+  height: 1px;
+  margin-top: 50px;
+  background-color: #7E482F;
+}
+
+.categories_item {
+  width: 100%;
+  height: auto;
+  padding: 30px 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 70px;
+}
+
+.image-checkbox input {
+  display: none;
+}
+
+.image-checkbox img {
+  width: 100%;
+  height: auto;
+}
+
+.checkmark {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.image-checkbox input:checked + .categories_img_item + .checkmark {
+  display: block;
+}
+
+.categories_text {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: #472F1A;
+  padding-left: 5px;
+  padding-top: 6px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+/* Адаптивные карточки рецептов */
+.recipes-name_img {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin: 50px auto 0;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.first_recipes {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  max-width: 360px;
+}
+
+.first_recipes img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.overlay_1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background: #FFFFFF;
+  opacity: 90%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.first_recipes_name {
+  width: 100%;
+  height: auto;
+  color: #141414;
+  font-size: clamp(14px, 3vw, 1.25em);
+  padding-left: 15px;
+  padding-top: 17px;
+  transition: all 0.3s ease;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.first_recipes_txt {
+  width: 90%;
+  max-width: 319px;
+  height: auto;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #565656;
+  font-size: clamp(12px, 2.5vw, 15px);
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+/* Адаптивный блок рекомендаций */
+.recommend {
+  margin: 50px auto 0;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.for_you {
+  width: 100%;
+  max-width: 482px;
+  height: auto;
+  padding: 0 5%;
+}
+
+.for_you_heading {
+  width: 100%;
+  height: auto;
+  color: #141414;
+  font-size: clamp(20px, 5vw, 27px);
+  font-family: ptserif;
+  line-height: 130%;
+  letter-spacing: 2%;
+}
+
+.arrow, .arrow_1, .arrow_2 {
+  width: 14px;
+  height: 23px;
+  padding-left: 10px;
+}
+
+.four_line, .five_line, .six_line {
+  width: 100%;
+  height: 1px;
+  background-color: #7E482F;
+  margin-top: 15px;
+}
+
+.authors_recipes {
+  width: 100%;
+  height: auto;
+  padding-top: 24px;
+}
+
+.first_block, .second_block, .third_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.block2 {
+  padding-left: 0;
+}
+
+.authors_first, .authors_second, .authors_third {
+  width: 100%;
+  max-width: 226px;
+  height: auto;
+}
+
+.authors_dishes {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+
+.authors_dishes img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay_2, .overlay_2_1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: #EAEAEA;
+  opacity: 90%;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.overlay_2 p, .overlay_2_1 p {
+  width: 100%;
+  height: auto;
+  color: #472F1A;
+  font-size: clamp(14px, 3vw, 17px);
+  padding: 0 10px 10px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+/* Адаптивный блок шеф-поваров */
+.chefy_popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.chefy_popular_video {
+  padding-left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chefys, .popular {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  padding: 20px 5%;
+}
+
+.chefys_heading, .popular_heading {
+  width: 100%;
+  height: auto;
+  color: #141414;
+  font-size: clamp(20px, 5vw, 27px);
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.chefy-name_info {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+.john_williams, .daniel_lee, .jasmine_patel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.chefy-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.chefy-info, .chefy-info_1, .chefy-info_2 {
+  width: 100%;
+  height: auto;
+  font-size: clamp(12px, 3vw, 15px);
+  color: #5E5E5E;
+  padding: 10px 0 0;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+/* Адаптивный блок видео */
+.video {
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  margin-top: 37px;
+  padding: 0 5%;
+}
+
+.video_block {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+.video_block img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay_4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #EAEAEA;
+  opacity: 75%;
+  box-sizing: border-box;
+}
+
+.pause_video {
+  margin: 20% auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Адаптивный блок создания блюда */
+.creating_dish {
+  margin: 50px auto 0;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.your_dishes {
+  width: 100%;
+  height: auto;
+  color: #141414;
+  font-size: clamp(24px, 6vw, 36px);
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+  text-align: center;
+}
+
+.creat_dished {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 785px;
+  height: auto;
+  margin-top: 40px;
+  box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.25);
+}
+
+.products {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 317px;
+  height: auto;
+}
+
+.creating_block1, .creating_block2 {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 297px;
+}
+
+.quantity, .for_to {
+  width: 100%;
+  height: auto;
+  color: #565656;
+  opacity: 53%;
+  font-size: clamp(14px, 3.5vw, 1.25em);
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.block_quantity, .choice_mealtime, .block_ingridients {
+  width: 100%;
+  max-width: 296px;
+  height: 47px;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  border: 1px solid #74371E;
+  align-items: center;
+  margin: 10px auto;
+  box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+
+.ingredients_top, .ingredients_bottom {
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.tomato, .pasta, .mint, .beef, .soy_sauce, .other_ingridient {
+  height: 37px;
+  background-color: #F58D41;
+  color: #FFFFFF;
+  border-radius: 7px;
+  font-size: clamp(12px, 3vw, 1.25em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+/* Адаптивные спонсоры */
+.sponsors {
+  width: 90%;
+  height: auto;
+  align-items: center;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsors img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Адаптивный блок собственного рецепта */
+.own_recipe {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.own_recipe_block1, .own_recipe_block2, .own_recipe_block3 {
+  display: none;
+}
+
+.your_own_recipe {
+  width: 100%;
+  height: auto;
+  color: #141414;
+  font-size: clamp(24px, 6vw, 36px);
+  padding: 30px 5% 0;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.creat_own_recipe {
+  width: 100%;
+  height: auto;
+  color: #565656;
+  font-size: clamp(14px, 3.5vw, 1.25em);
+  padding: 20px 5%;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.creat_blog {
+  width: 200px;
+  height: 52px;
+  margin: 20px auto;
+  background-color: #F58D41;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Адаптивные линии */
+.seven_line, .eight_line, .nine_line {
+  width: 80%;
+  height: 1px;
+  background-color: #7E482F;
+  margin: 40px auto;
+}
+
+/* Адаптивный блок подписки */
+.follow {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+}
+
+.follow_txt {
+  width: 100%;
+  height: auto;
+  font-size: clamp(20px, 5vw, 27px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #141414;
+  gap: 10px;
+}
+
+.follow_img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.follow_img img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Адаптивный футер */
+.footer {
+  width: 100%;
+  height: auto;
+  margin: 50px auto 0;
+  background-color: #662308;
+  opacity: 91%;
+  padding: 30px 5%;
+}
+
+.footer_info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  color: #FFFFFF;
+  justify-content: center;
+  gap: 30px;
+}
+
+.chefy_1 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 36px);
+  padding-top: 20px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: Chefy;
+}
+
+.address, .contacts {
+  width: 100%;
+  max-width: 250px;
+  font-size: clamp(12px, 3vw, 15px);
+  padding: 10px 0;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.menu, .about_us, .support, .feedback {
+  width: 100%;
+  max-width: 250px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(16px, 4vw, 1.25em);
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+}
+
+.feedback_block {
+  width: 100%;
+  max-width: 307px;
+  height: auto;
+  margin: 10px auto;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid #74371E;
+  padding: 10px;
+}
+
+.send_block {
+  width: 100%;
+  height: 43px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  border: 1px solid #74371E;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.email_address {
+  width: 60%;
+  height: 21px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-size: clamp(12px, 2.5vw, 15px);
+  color: #565656;
+  opacity: 53%;
+}
+
+.send {
+  width: 80px;
+  height: 33px;
+  background-color: #CCCCCC;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.date_networks {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.date {
+  width: 100%;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 2%;
+  font-family: ptserif;
+  color: #FFFFFF;
+  font-size: clamp(12px, 3vw, 15px);
+}
+
+.social_networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Медиа-запрос для iPhone 12 (390px ширина) */
+@media screen and (max-width: 390px) {
+  .header__left, .header__right {
+    gap: 10px;
+  }
+  
+  .header__a {
+    font-size: 11px;
+  }
+  
+  .link__left, .link__right {
+    gap: 10px;
+  }
+  
+  .link__a, .link__a_last {
+    font-size: 12px;
+  }
+  
+  .chefy__txt {
+    font-size: 28px;
+  }
+  
+  .select {
+    width: 160px;
+    background-position: 130px;
+  }
+  
+  .search__recipes {
+    width: 160px;
+  }
+  
+  .overlay-content p {
+    font-size: 10px;
+    padding-left: 8px;
+  }
+  
+  .categories_item {
+    gap: 10px;
+  }
+  
+  .image-checkbox {
+    width: 50px;
+  }
+}
+
+/* Медиа-запрос для планшетов */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .search {
+    flex-direction: row;
+  }
+  
+  .search__txt {
+    width: 50%;
+  }
+  
+  .DuckDish_img {
+    width: 50%;
+  }
+  
+  .footer_info {
+    justify-content: space-around;
+  }
+}
+
+/* Общие стили для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Стили для скрытых элементов на мобильных */
+.search__page {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.page, .page1, .other, .last_page {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
